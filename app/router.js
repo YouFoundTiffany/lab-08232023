@@ -4,7 +4,8 @@ import { HomeController } from "./controllers/HomeController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 import { CarsView } from "./views/CarsView.js";
-
+import {HousesController} from "./views/HousesView.js";
+import { HousesView } from "./views/HousesView.js";
 
 export const router = [
   {
@@ -123,9 +124,9 @@ export const router = [
   },
 
   // TODO for the students: start here for houses page
-  // {
-  //   path: 
-  //   controllers:
-  //   view:
-  // }
+  {
+    path: '#/houses',
+    controllers: HousesController,
+    view: 'hello from House Controller'
+  }
 ]

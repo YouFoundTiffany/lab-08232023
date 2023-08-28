@@ -1,4 +1,5 @@
 import { Car } from "./models/Car.js"
+import { House } from "./models/House.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
 import { isValidProp } from "./utils/isValidProp.js"
@@ -10,7 +11,24 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Value.js').Value[]} */
   values = loadState('values', [Value])
 
+// SECTION HOUSES
+  houses = loadState('houses', [House]) 
+  
+  houses = [
+  new House ({
+  year: 1912,
+  name: 'craftsman',
+  bedrooms: 4,
+  bathrooms: 2,
+  sqft: 1898,
+  price: 250000,
+  description: 'jfkldls jfkdosllsieuhjnjkd hjkfds, hfjdkskjsdh, fhds.',
+  imgUrl: "https://cdn.vox-cdn.com/thumbor/AfNC-ZaVF2mtc1zsFCH8lffsZ-c=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19565702/4570_University_Ave____Pierre_Galant_1.jpg",
+  })
+]
 
+
+// SECTION CARS
   cars = loadState('cars', [Car])
 
   // cars = [
